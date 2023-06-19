@@ -137,7 +137,8 @@
         <p>Twitch Votes: <span id="twitchCount"></span></p>
         <p>Thresh Votes: <span id="threshCount"></span></p>
     </div>
-
+    <div id="result">
+    </div>
     <script>
         function submitForm(event) {
             event.preventDefault();
@@ -152,6 +153,7 @@
 
             const jsonData = JSON.stringify(voteData);
             saveVote(jsonData);
+            form.reset(); 
         }
 
         function saveVote(data) {
@@ -197,6 +199,7 @@
                     document.getElementById('camileCount').textContent = camileCount;
                     document.getElementById('twitchCount').textContent = twitchCount;
                     document.getElementById('threshCount').textContent = threshCount;
+                    alert("Submit successful!");
                 })
                 .catch(error => {
                     console.log('An error occurred:', error);
