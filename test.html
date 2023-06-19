@@ -1,112 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    h1 {
-        color: rgba(2, 31, 33, 0.709);
-        text-align: center;
-    }
-    button {
-        background-color: rgb(179, 211, 22);
-        color: rgb(14, 2, 2);
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top:10px;
-        margin-bottom: 40px
-    }
-    button:hover{
-        color:red;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        background-image: url('image/bkt.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .my-list {
-
-        display: flex;
-        font-weight: bold;
-        justify-content: center;
-        border: 2px solid pink;
-        border-radius: 200px;
-        list-style-type: none;
-        margin-bottom: 30px;
-    }
-
-    .my-list li {
-        color: rebeccapurple;
-        margin: 10px;
-        padding: 5px 20px;
-        background-color: wheat;
-        border-radius: 200px;
-        box-sizing: border-box;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-    }
-
-    p {
-        background-color: #fff;
-        text-align: center;
-        color: rgb(13, 1, 1);
-        border: 10px solid rgb(230, 237, 2);
-        border-radius: 200px;
-        font-size: 20px;
-        padding: 100px;
-    }
-    @media (max-width: 500px) {
-        .my-list {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-    @media (max-width: 500px) {
-        h1 {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        p {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-</style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting System</title>
+    <style>
+        h1 {
+            color: rgba(2, 31, 33, 0.709);
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 15px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px grey;
+            margin-top: 10px;;
+        }
+
+        .button:hover {
+            color: red;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image/bkt.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .my-list {
+
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            border: 2px solid pink;
+            border-radius: 200px;
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+
+        .my-list li {
+            color: rebeccapurple;
+            margin: 10px;
+            padding: 5px 20px;
+            background-color: wheat;
+            border-radius: 200px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        p {
+            background-color: #fff;
+            text-align: center;
+            color: rgb(13, 1, 1);
+            border: 10px solid rgb(230, 237, 2);
+            border-radius: 200px;
+            font-size: 20px;
+            padding: 100px;
+        }
+
+        @media (max-width: 500px) {
+            .my-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            p {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
     <nav>
         <ul class="my-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="test.html">Activity</a></li>
-  
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="test.html">Activity</a></li>
+
         </ul>
-      </nav>
-
-</head>
-
-<body>
+    </nav>
     <h1>Want to do some interesting things?</h1>
     <p>
         After reading my website, you will know somehow about these three champions.
-     <br>Wanna to do a vote section to select which one you think is the coolest?
-     <br>
-     <button>
-        <a href="vote.html">Yes(VOTE!!!!!)</a>
-    </button>
-    <br>
-    <button>
-        <a href="portfolio.html">No(WANT TO KNOW MORE INFORMATION!)</a>
-    </button>
-    
+        <br>Wanna to do a vote section to select which one you think is the coolest?
+        <br>
+        <a href="vote.html" class="button">Yes (VOTE!!!!!)</a>
+        <br>
+        <br>
+        <a href="portfolio.html" class="button">No(WANT TO KNOW MORE INFORMATION!)</a>
+
     </p>
 </body>
 

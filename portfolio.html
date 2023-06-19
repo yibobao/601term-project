@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 <script type="module">
   new Vue({
@@ -49,8 +51,6 @@
   });
 
 </script>
-<head>
-  <meta charset="UTF-8">
   <title>My Website - About Me in Game</title>
   <style>
     a {
@@ -83,8 +83,9 @@
       /* set color of word of table */
     }
 
-    img {
-      size:auto;
+    .image {
+      margin-top: 30px;
+      margin-bottom: 30px;
       display: block;
       margin: 0 auto;
       max-width: 100%;
@@ -213,23 +214,20 @@
       <td> 3</td>
       <td><a href="camile.html">Camile</a></td>
     </tr>
-  </table>
+  </table><br>
+
   <div id="app">
-    <div class="image-container">
       <a href="twitch.html">
-      <img class="image" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
-    </a></div>
-  </div>
+      <img class="image" alt="twitch" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
+    </a></div><br>
   <div id="app2">
-    <div class="image-container">
       <a href="camile.html">
-      <img class="image" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
-    </a></div></div>
+      <img class="image" alt ="camile" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
+    </a></div><br>
   <div id="app3">
-    <div class="image-container">
       <a href="thresh.html">
-    <img class="image" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
-  </a></div></div>
+    <img class="image"  alt = "thresh" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
+  </a></div>
 
 
   <p class="content">Welcome to my portfolio, here I will introduce some heros I think I am good at.
