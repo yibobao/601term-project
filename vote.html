@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting System</title>
+    <nav>
+        <ul class="my-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="test.html">Activity</a></li>
+        </ul>
+    </nav>
+</head> 
+<style>
+    .my-list {
+
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+        border: 2px solid pink;
+        border-radius: 200px;
+        list-style-type: none;
+        margin-bottom: 30px;
+      }
+  
+      .my-list li {
+        color: rebeccapurple;
+        margin: 10px;
+        padding: 5px 20px;
+        background-color: wheat;
+        border-radius: 200px;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('image/bkt.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        max-width: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    #voteCounts {
+        max-width: 300px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #voteCounts h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    #voteCounts p {
+        margin-bottom: 5px;
+    }
+</style>
+<body>
+    <h1>Vote for Your Favorite Champion</h1>
+
+    <form id="votingForm" onsubmit="submitForm(event)">
+        <label>
+            Name:
+            <input type="text" name="name"  pattern="^[A-Z][a-z]+$" required>
+        </label>
+        <br>
+        <label>
+            Champion:
+            <select name="champion">
+                <option value="Camile">Camile</option>
+                <option value="Twitch">Twitch</option>
+                <option value="Thresh">Thresh</option>
+            </select>
+        </label>
+        <br>
+        <button type="submit">Submit Vote</button>
+    </form>
+
+    <div id="voteCounts">
+        <h2>Vote Counts</h2>
+        <p>Camile Votes: <span id="camileCount"></span></p>
+        <p>Twitch Votes: <span id="twitchCount"></span></p>
+        <p>Thresh Votes: <span id="threshCount"></span></p>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('votingForm');
+            const formData = new FormData(form);
+
+            const voteData = {
+                name: formData.get('name'),
+                champions: formData.get('champion')
+            };
+
+            const jsonData = JSON.stringify(voteData);
+            saveVote(jsonData);
+        }
+
+        function saveVote(data) {
+            fetch('http://localhost/test/data.json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: data
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Vote saved successfully.');
+                    displayVoteCounts();
+                } else {
+                    console.log('Error saving vote.');
+                }
+            })
+            .catch(error => {
+                console.log('An error occurred:', error);
+            });
+        }
+
+        function displayVoteCounts() {
+            fetch('http://localhost/test/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const voteCounts = {
+                        Camile: 0,
+                        Twitch: 0,
+                        Thresh: 0
+                    };
+
+                    data.forEach(vote => {
+                        const champion = vote.champions;
+                        voteCounts[champion]++;
+                    });
+
+                    const camileCount = voteCounts.Camile;
+                    const twitchCount = voteCounts.Twitch;
+                    const threshCount = voteCounts.Thresh;
+
+                    document.getElementById('camileCount').textContent = camileCount;
+                    document.getElementById('twitchCount').textContent = twitchCount;
+                    document.getElementById('threshCount').textContent = threshCount;
+                })
+                .catch(error => {
+                    console.log('An error occurred:', error);
+                });
+        }
+    </script>
+</body>
+</html>

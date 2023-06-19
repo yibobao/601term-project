@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My favorite hero - Twitch</title>
+    <style>
+        a {
+            color: rgb(13, 233, 24);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        .title {
+            text-align: center;
+            color: rgb(19, 200, 246);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            color: white;
+        }
+
+        p {
+            font-size: 25px;
+            font-style: initial;
+            color: rgb(33, 118, 255);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image/bk1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 500px) {
+            .my-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            img,
+            video {
+                max-width: 100%;
+                height: auto;
+                margin: 10px auto;
+            }
+        }
+
+        .my-list {
+
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            border: 2px solid pink;
+            border-radius: 200px;
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+
+        .my-list li {
+            color: rebeccapurple;
+            margin: 10px;
+            padding: 5px 20px;
+            background-color: wheat;
+            border-radius: 200px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .header {
+            color: rgba(255, 255, 255, 0.709);
+        }
+
+        .my-list a {
+            color: blueviolet;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="portfolio.html">Back</a>
+    <header>
+        <nav>
+            <ul class="my-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="test.html">Activity</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="title">Introduction to Twitch</h1>
+    <img src="image/twitch1.jpg" alt="hero">
+    <p>
+        A Zaunite plague rat by birth, but a connoisseur of filth
+        by passion, Twitch is not afraid to get his paws dirty. Aiming
+        a chem-powered crossbow at the gilded heart of Piltover, he has
+        vowed to show those in the city above just how filthy they really
+        are. Always a sneaky sneak, when he's not rooting around in the Sump,
+        he's digging deep into other people's garbage for discarded treasures…
+        and perhaps a moldy sandwich.
+    </p>
+    <footer>
+        &copy;2023. Yibo bao. Open Source. BU Student
+    </footer>
+</body>
+
+</html>

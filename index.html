@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    My Personal Site
+  </title>
+  <style>
+    .header {
+      text-align: center;
+      color: black;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('image/view.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .title p {
+      font-size: 25px;
+      font-style: initial;
+      color: rgb(42, 124, 165);
+      border: 1px solid black;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .tail p {
+      font-size: 20px;
+      font-style: initial;
+      color: blue;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .my-list {
+
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      border: 2px solid pink;
+      border-radius: 200px;
+      list-style-type: none;
+      margin-bottom: 30px;
+    }
+
+    .my-list li {
+      color: rebeccapurple;
+      margin: 10px;
+      padding: 5px 20px;
+      background-color: wheat;
+      border-radius: 200px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .my-list a {
+      color: blueviolet;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      .my-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .tail {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .title {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      img,
+      video {
+        max-width: 80%;
+        height: auto;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+
+      <ul class="my-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="test.html">Activity</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="header">Welcome to My Website</h1>
+  <img src="image/backofLOL.jpg" alt="">
+  <div class="title">
+    <p>Welcome to my personal website. I am excited to
+      share my favorite game with you.
+      Feel free to explore the different pages and share your favorite
+      game with you so we can play the game together</p>
+  </div>
+
+
+  <video controls>
+    <source src="music/bgm.mp3" type="video/mp4">
+  </video>
+
+  <div class="tail">
+    <p>If you have any questions, try to reach me out. Probably I will feel free to
+      reply to you. Hope you are enjoying your summer vacation!
+    </p>
+  </div>
+  <footer>
+    &copy;2023. Yibo bao. Open Source. BU Student
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Favorite Game - AboutMe</title>
+  <style>
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .title {
+      text-align: center;
+      color: rgb(44, 12, 96);
+    }
+
+    footer {
+      color: aquamarine
+    }
+
+    .list2 {
+      font-weight: bold;
+      justify-content: center;
+      list-style-type: none;
+      margin-bottom: 30px;
+    }
+
+    .list2 li {
+      color: rgb(194, 119, 22);
+      margin: 10px;
+      padding: 5px 10px;
+      background-color: rgb(29, 24, 102);
+      border-radius: 300px;
+      box-sizing: border-box;
+      text-align: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .link {
+      background-color: rgb(192, 219, 255);
+      color: aqua;
+      margin-bottom: 40px;
+    }
+
+    .start {
+      color: aqua;
+      font-size: 40px;
+    }
+
+    .second-start {
+      color: aqua;
+      font-size: 20px;
+    }
+
+    .third-start {
+      color: aqua;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      font-style: initial;
+      color: pink;
+      border: 1px solid black;
+      padding: 10px;
+
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('image/bk2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: 500px) {
+      .my-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .list2 {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      p {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+      }
+    }
+
+    .my-list {
+
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      border: 2px solid pink;
+      border-radius: 200px;
+      list-style-type: none;
+      margin-bottom: 30px;
+    }
+
+    .my-list li {
+      color: rebeccapurple;
+      margin: 10px;
+      padding: 5px 20px;
+      background-color: wheat;
+      border-radius: 200px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .header {
+      color: rgba(255, 255, 255, 0.709);
+    }
+
+    .my-list a {
+      color: blueviolet;
+      text-decoration: none;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul class="my-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="test.html">Activity</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="title">League of Legends</h1>
+  <img src="image/me.jpg" alt="Picture of Me">
+
+  <h2 class="start">My Background</h2>
+
+  <p>I am a student who have studied in BU for 1 year.And I have completed
+    sevral classes and now I want to learn how to create a new website which
+    is concentrate on my favorite game league of legends. And
+    this is really an interesting journey. Hope I will enjoy it.
+  </p>
+
+  <h2 class="second-start">Reson I love it</h2>
+
+  <ul class="list2">
+    <li>Exciting</li>
+    <li>Cooperation</li>
+    <li>Interesting</li>
+  </ul>
+  <h2 class="third-start">Official Website of League of Legends</h2>
+  <div class="link"><a href="https://www.leagueoflegends.com/en-us/">Learn About League of Legends</a></div>
+
+  <footer>
+    &copy; 2023 My Website. All rights reserved.
+  </footer>
+</body>
+
+</html>

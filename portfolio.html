@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script type="module">
+  new Vue({
+    el: '#app',
+    data: {
+      currentImage: 'image/twitch.jpg',
+      processImage: 'image/twitch2.jpg',
+    },
+    methods: {
+      changeImage: function() {
+        this.currentImage = this.processImage;
+      },
+      restoreImage: function() {
+        this.currentImage = 'image/twitch.jpg';
+      }
+    }
+  });
+  new Vue({
+    el: '#app2',
+    data: {
+      currentImage: 'image/camile.jpg',
+      processImage: 'image/camile2.jpg',
+    },
+    methods: {
+      changeImage: function() {
+        this.currentImage = this.processImage;
+      },
+      restoreImage: function() {
+        this.currentImage = 'image/camile.jpg';
+      }
+    }
+  });
+  new Vue({
+    el: '#app3',
+    data: {
+      currentImage: 'image/thresh.jpg',
+      processImage: 'image/thresh2.jpg',
+    },
+    methods: {
+      changeImage: function() {
+        this.currentImage = this.processImage;
+      },
+      restoreImage: function() {
+        this.currentImage = 'image/thresh.jpg';
+      }
+    }
+  });
+
+</script>
+<head>
+  <meta charset="UTF-8">
+  <title>My Website - About Me in Game</title>
+  <style>
+    a {
+      color: rgb(101, 247, 17);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(135, 221, 29);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+      color: antiquewhite
+    }
+
+    @media (max-width: 70px) {
+      table {
+        width: 80%;
+      }
+    }
+
+    th {
+      background-color: gray;
+      /* set color of title of table */
+      color: rgb(188, 37, 135);
+      /* set color of word of table */
+    }
+
+    img {
+      size:auto;
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      color: white;
+    }
+
+    .title {
+      text-align: center;
+      color: rgb(86, 241, 8);
+    }
+
+    .content {
+      font-size: 25px;
+      font-style: initial;
+      color: rgb(33, 199, 208);
+      border: 1px solid black;
+      padding: 10px;
+      background-color: rgb(47, 79, 87);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('image/bk2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: 500px) {
+      .my-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+      }
+    }
+    .image-container {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .my-list {
+
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      border: 2px solid pink;
+      border-radius: 200px;
+      list-style-type: none;
+      margin-bottom: 30px;
+    }
+
+    .my-list li {
+      color: rebeccapurple;
+      margin: 10px;
+      padding: 5px 20px;
+      background-color: wheat;
+      border-radius: 200px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .header {
+      color: rgba(255, 255, 255, 0.709);
+    }
+
+    .my-list a {
+      color: blueviolet;
+      text-decoration: none;
+      text-align: center;
+    }
+    #app, #app2,#app3 {
+      display: flex;
+      justify-content: center;
+    }
+    .image-container {
+      display: inline-block;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="my-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="test.html">Activity</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <h1 class="title">My Portfolio</h1>
+
+  <table>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><a href="twitch.html">Twitch</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="thresh.html">Thresh</a></td>
+    </tr>
+    <tr>
+      <td> 3</td>
+      <td><a href="camile.html">Camile</a></td>
+    </tr>
+  </table>
+  <div id="app">
+    <div class="image-container">
+      <a href="twitch.html">
+      <img class="image" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
+    </a></div>
+  </div>
+  <div id="app2">
+    <div class="image-container">
+      <a href="camile.html">
+      <img class="image" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
+    </a></div></div>
+  <div id="app3">
+    <div class="image-container">
+      <a href="thresh.html">
+    <img class="image" v-bind:src="currentImage" v-on:mouseover="changeImage" v-on:mouseleave="restoreImage">
+  </a></div></div>
+
+
+  <p class="content">Welcome to my portfolio, here I will introduce some heros I think I am good at.
+    I hope if you are also interesed in these heros, feel free to communicate with me.
+    about the experience how to use it.
+  </p>
+  <footer>
+    &copy;2023. Yibo bao. Open Source. BU Student
+  </footer>
+</body>
+
+</html>

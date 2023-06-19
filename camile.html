@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My favorite hero - Camile</title>
+    <style>
+        a {
+            color: rgb(13, 233, 24);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        .title {
+            text-align: center;
+            color: rgb(206, 229, 28);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            color: white;
+        }
+
+        p {
+            font-size: 25px;
+            font-style: initial;
+            color: rgb(66, 95, 143);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image/bk1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 500px) {
+            p {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .my-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            img,
+            video {
+                max-width: 100%;
+                height: auto;
+                margin: 10px auto;
+            }
+        }
+
+        .my-list {
+
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            border: 2px solid pink;
+            border-radius: 200px;
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+
+        .my-list li {
+            color: rebeccapurple;
+            margin: 10px;
+            padding: 5px 20px;
+            background-color: wheat;
+            border-radius: 200px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .header {
+            color: rgba(255, 255, 255, 0.709);
+        }
+
+        .my-list a {
+            color: blueviolet;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="portfolio.html">Back</a>
+    <header>
+        <nav>
+            <ul class="my-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="test.html">Activity</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <h1 class="title">Introduction to Camile</h1>
+
+    <p>
+        Weaponized to operate outside the boundaries of the law, Camille
+        is the Principal Intelligencer of Clan Ferros—an elegant and elite
+        agent who ensures the Piltover machine and its Zaunite underbelly
+        runs smoothly. Adaptable and precise, she views sloppy technique as
+        an embarrassment that must be put to order. With a mind as sharp as the
+        blades she bears, Camille's pursuit of superiority through hextech body
+        augmentation has left many to wonder if she is now more machine than woman.
+    </p>
+    <img src="image/camile1.jpg" alt="hero">
+    <footer>
+        &copy;2023. Yibo bao. Open Source. BU Student
+    </footer>
+</body>
+
+</html>

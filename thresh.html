@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My favorite hero - Thresh</title>
+    <style>
+        a {
+            color: rgb(13, 233, 24);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        .title {
+            text-align: center;
+            color: rgb(149, 219, 28);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            color: white;
+        }
+
+        p {
+            font-size: 25px;
+            font-style: initial;
+            color: rgb(62, 186, 24);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image/bk1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 500px) {
+            .my-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            img,
+            video {
+                max-width: 100%;
+                height: auto;
+                margin: 10px auto;
+            }
+        }
+
+        .my-list {
+
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            border: 2px solid pink;
+            border-radius: 200px;
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+
+        .my-list li {
+            color: rebeccapurple;
+            margin: 10px;
+            padding: 5px 20px;
+            background-color: wheat;
+            border-radius: 200px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .header {
+            color: rgba(255, 255, 255, 0.709);
+        }
+
+        .my-list a {
+            color: blueviolet;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="portfolio.html">Back</a>
+    <header>
+        <nav>
+            <ul class="my-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="test.html">Activity</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <h1 class="title">Introduction to Thresh</h1>
+
+    <p>
+        Sadistic and cunning, Thresh is an ambitious and restless
+        spirit of the Shadow Isles. Once the custodian of countless
+        arcane secrets, he was undone by a power greater than life or
+        death, and now sustains himself by tormenting and breaking others
+        with slow, excruciating inventiveness. His victims suffer far beyond
+        their brief mortal coil as Thresh wreaks agony upon their souls,
+        imprisoning them in his unholy lantern to torture for all eternity.
+    </p>
+    <img src="image/thresh1.jpg" alt="hero">
+    <footer>
+        &copy;2023. Yibo bao. Open Source. BU Student
+    </footer>
+</body>
+
+</html>
